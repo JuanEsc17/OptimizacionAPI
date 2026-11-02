@@ -26,7 +26,7 @@ def calcular_recorrido_eficiente():
 
     try:
         coordenadas_ordenadas = optimizar_ruta(datos['coordenadas'])
-        return jsonify(coordenadas_ordenadas), 200
+        return jsonify({"coordenadas": coordenadas_ordenadas}), 200
     except OSRMError as err:
         return jsonify({"error": err.message}), err.status_code
 

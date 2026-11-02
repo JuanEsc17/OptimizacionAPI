@@ -295,7 +295,7 @@
                 <tbody>
                     <tr>
                         <td><code>200 OK</code></td>
-                        <td>Devuelve la lista con las coordenadas ordenadas óptimamente.</td>
+                        <td>Devuelve un objeto con la lista de coordenadas ordenadas óptimamente.</td>
                     </tr>
                     <tr>
                         <td><code>400 Bad Request</code></td>
@@ -317,12 +317,14 @@
                     <span>Ejemplo de respuesta 200 OK (Orden Optimizado)</span>
                     <button class="btn-copy" onclick="copySnippet('res-body', this)">Copiar</button>
                 </div>
-                <pre id="res-body">[
-  {"lat": -34.6037, "lon": -58.3816},
-  {"lat": -34.5900, "lon": -58.3900},
-  {"lat": -34.5700, "lon": -58.4300},
-  {"lat": -34.5450, "lon": -58.4500}
-]</pre>
+                <pre id="res-body">{
+  "coordenadas": [
+    {"lat": -34.6037, "lon": -58.3816},
+    {"lat": -34.5900, "lon": -58.3900},
+    {"lat": -34.5700, "lon": -58.4300},
+    {"lat": -34.5450, "lon": -58.4500}
+  ]
+}</pre>
             </div>
             <p style="margin-top: 10px; font-size: 13px; color: var(--text-secondary);">
                 Nota: El primer y último punto se mantuvieron fijos, mientras que los puntos intermedios
